@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600">
+  <rect width="480" height="600" fill="#E2DBC9"/>
+  <circle cx="240" cy="230" r="90" fill="#c9bfa2"/>
+  <rect x="90" y="340" width="300" height="260" rx="150" fill="#c9bfa2"/>
+  <text x="240" y="560" text-anchor="middle" font-family="Karla, sans-serif" font-size="16" fill="#6b6350">Remplacer par une photo d'Audrey</text>
+</svg>

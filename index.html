@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Racine et Souffle · Sophrologie · Audrey</title>
+<meta name="description" content="Séances individuelles de sophrologie à domicile ou en visio, dans le 93, 77, 95 et l'Oise. Un cadre confidentiel, un parcours en 8 séances.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ocean:#1F4B57;
+    --ivory:#F5F1E8;
+    --plant:#6B8E5A;
+    --tropic:#E8C468;
+    --terracotta:#A8673D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Karla',sans-serif;
+    background:var(--ivory);
+    color:var(--ocean);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{font-family:'Fraunces',serif;font-weight:500;color:var(--ocean)}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  .section{padding:72px 0}
+  .section--alt{background:#EFE9DA}
+
+  /* header */
+  header{position:sticky;top:0;background:rgba(245,241,232,.92);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid rgba(31,75,87,.1)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:960px;margin:0 auto}
+  .brand{font-size:22px;letter-spacing:.02em}
+  .brand span{color:var(--terracotta)}
+  .nav-links{display:flex;gap:28px;list-style:none;font-size:15px}
+  .nav-links a{text-decoration:none;opacity:.85}
+  .nav-links a:hover{opacity:1;color:var(--terracotta)}
+  .nav-cta{background:var(--terracotta);color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+  .nav-cta:hover{background:#8f5530}
+  .menu-toggle{display:none}
+
+  /* hero */
+  .hero{padding:96px 0 72px;text-align:center}
+  .hero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.25;max-width:820px;margin:0 auto 28px}
+  .hero .sub{max-width:640px;margin:0 auto 40px;font-size:17px;color:#3a5a63}
+  .btn{display:inline-block;background:var(--terracotta);color:#fff;text-decoration:none;padding:16px 34px;border-radius:6px;font-weight:600;font-size:16px;transition:background .2s}
+  .btn:hover{background:#8f5530}
+  .btn--outline{background:transparent;border:1.5px solid var(--ocean);color:var(--ocean)}
+  .btn--outline:hover{background:var(--ocean);color:#fff}
+
+  h2{font-size:clamp(24px,3vw,32px);margin-bottom:32px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media (max-width:720px){.two-col{grid-template-columns:1fr}}
+
+  .card{background:#fff;border-radius:10px;padding:32px;border:1px solid rgba(31,75,87,.08)}
+  .card h3{font-size:19px;margin-bottom:16px;font-family:'Karla',sans-serif;font-weight:700}
+  .card ul{list-style:none}
+  .card li{position:relative;padding-left:26px;margin-bottom:12px;font-size:15.5px}
+  .card--yes li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--plant)}
+  .card--no li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--terracotta)}
+
+  .clause{margin-top:36px;background:#EFE9DA;border-left:3px solid var(--terracotta);padding:22px 26px;border-radius:4px;font-size:15px;color:#3a5a63}
+
+  /* offer table */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:15px}
+  caption{caption-side:top;text-align:left;margin-bottom:12px}
+  th,td{padding:16px 18px;text-align:left;border-bottom:1px solid rgba(31,75,87,.08)}
+  th{background:var(--ocean);color:var(--ivory);font-family:'Karla',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.03em;text-transform:uppercase}
+  tr:last-child td{border-bottom:none}
+  td.price{font-weight:700;color:var(--terracotta);white-space:nowrap}
+  .total-row td{background:#EFE9DA;font-weight:700}
+  .table-note{margin-top:20px;font-size:14.5px}
+  .table-note ul{margin-left:20px}
+  .table-note li{margin-bottom:8px}
+  .table-scroll{overflow-x:auto}
+  .link-pay{color:var(--plant);text-decoration:underline;font-size:13.5px;white-space:nowrap}
+
+  .offer-cta{margin-top:40px;text-align:center}
+
+  /* practical grid */
+  .practical-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media (max-width:720px){.practical-grid{grid-template-columns:1fr}}
+  .practical-grid .card h3{color:var(--terracotta)}
+
+  /* about */
+  .about{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start}
+  @media (max-width:720px){.about{grid-template-columns:1fr}}
+  .about-photo{width:100%;aspect-ratio:4/5;border-radius:10px;object-fit:cover;background:#e2dbc9}
+  .about p{margin-bottom:18px;font-size:15.5px}
+  .about .signature{font-family:'Fraunces',serif;font-size:19px;margin-top:8px}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media (max-width:720px){.contact-grid{grid-template-columns:1fr}}
+  form{display:flex;flex-direction:column;gap:16px}
+  label{font-size:14px;font-weight:600;margin-bottom:4px;display:block}
+  input,textarea{width:100%;padding:12px 14px;border:1px solid rgba(31,75,87,.25);border-radius:6px;font-family:'Karla',sans-serif;font-size:15px;background:#fff;color:var(--ocean)}
+  textarea{min-height:130px;resize:vertical}
+  input:focus,textarea:focus{outline:2px solid var(--plant);outline-offset:1px}
+  .submit-btn{align-self:flex-start;margin-top:4px;border:none;cursor:pointer}
+  .contact-side .card{margin-bottom:20px}
+
+  footer{padding:40px 24px;text-align:center;font-size:13.5px;color:#5c7981;border-top:1px solid rgba(31,75,87,.1)}
+  footer .brand{font-size:16px;margin-bottom:8px}
+
+  @media (max-width:720px){
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#accueil" class="brand">Racine <span>et</span> Souffle</a>
+    <ul class="nav-links">
+      <li><a href="#offre">L'offre</a></li>
+      <li><a href="#pratique">Infos pratiques</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://www.sumupbookings.com/audreyozen" target="_blank" rel="noopener">Réserver</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero wrap">
+    <h1>La sophrologie est une méthode de relaxation par la respiration et la conscience du corps, pour se reconnecter à son potentiel et avancer avec plus de clarté.</h1>
+    <p class="sub">L'accompagnement propose un cadre et des outils ; le chemin parcouru dépend avant tout de votre engagement et de votre régularité.</p>
+    <a class="btn" href="https://www.sumupbookings.com/audreyozen" target="_blank" rel="noopener">Réserver une séance</a>
+  </section>
+
+  <!-- CE QUE C'EST / CE QUE CA N'EST PAS -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <h2>Ce que c'est — ce que ça n'est pas</h2>
+      <div class="two-col">
+        <div class="card card--yes">
+          <h3>Ce que c'est</h3>
+          <ul>
+            <li>Des séances individuelles de sophrologie, à domicile ou en visio</li>
+            <li>Un accompagnement pour se détendre, se préparer, mieux traverser une période exigeante</li>
+            <li>Des séances proposées en créole, sur demande</li>
+            <li>Un cadre confidentiel, en petit nombre de places</li>
+          </ul>
+        </div>
+        <div class="card card--no">
+          <h3>Ce que ça n'est pas</h3>
+          <ul>
+            <li>Une thérapie ou un soin médical</li>
+            <li>Un diagnostic ou une promesse de résultat</li>
+            <li>Un complément affiché à un suivi médical en cours</li>
+          </ul>
+        </div>
+      </div>
+      <p class="clause">Cet accompagnement relève du développement personnel. Il s'appuie sur la sophrologie, l'hypnose ericksonienne et un travail d'exploration de son histoire personnelle. Il ne remplace ni un suivi médical, ni un suivi psychologique, et n'a pas vocation à s'y substituer.</p>
+    </div>
+  </section>
+
+  <!-- OFFRE -->
+  <section id="offre" class="section">
+    <div class="wrap">
+      <h2>L'offre — parcours en 8 séances</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Durée</th>
+              <th scope="col">Contenu</th>
+              <th scope="col">Tarif</th>
+              <th scope="col">Paiement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Séance 1 — Anamnèse</td>
+              <td>jusqu'à 90 min</td>
+              <td>Anamnèse + première séance</td>
+              <td class="price">100 €</td>
+              <td><a class="link-pay" href="https://pay.sumup.com/b2c/QMECCT3I" target="_blank" rel="noopener">Payer cette séance →</a></td>
+            </tr>
+            <tr>
+              <td>Séances 2 à 8 (×7)</td>
+              <td>60 min</td>
+              <td>Séance de sophrologie + outils (TAIS et respirations dynamiques inclus)</td>
+              <td class="price">70 € chacune</td>
+              <td><a class="link-pay" href="https://pay.sumup.com/b2c/QITX8AZS" target="_blank" rel="noopener">Payer une séance →</a></td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3">Parcours complet (8 séances)</td>
+              <td class="price">590 €</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-note">
+        <ul>
+          <li>Pas de séance découverte : l'anamnèse fait partie de la séance 1.</li>
+          <li>Séances possibles en créole, sur demande.</li>
+          <li>Un support (TAIS + respirations dynamiques) est envoyé après chaque séance, à pratiquer seul entre deux rendez-vous.</li>
+          <li>Paiement séance par séance ou en une fois pour le parcours — pas d'engagement imposé sur les 8 séances.</li>
+        </ul>
+      </div>
+      <div class="offer-cta">
+        <a class="btn" href="https://www.sumupbookings.com/audreyozen" target="_blank" rel="noopener">Réserver la séance 1</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES -->
+  <section id="pratique" class="section section--alt">
+    <div class="wrap">
+      <h2>Infos pratiques</h2>
+      <div class="practical-grid">
+        <div class="card">
+          <h3>Zone géographique</h3>
+          <p>Présentiel dans le 93, 77, 95 et l'Oise (60). Pour les autres départements, réponse par mail selon la distance (visio ou déplacement à évaluer au cas par cas).</p>
+        </div>
+        <div class="card">
+          <h3>Capacité &amp; disponibilité</h3>
+          <p>Nombre de places limité, pour une vraie présence à chacune. Message vocal possible entre les séances, réponse sous 48h ouvrées.</p>
+        </div>
+        <div class="card">
+          <h3>Confidentialité</h3>
+          <p>Les données sont conservées deux ans après la fin de l'accompagnement, sans communication à un tiers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos" class="section">
+    <div class="wrap">
+      <h2>À propos</h2>
+      <div class="about">
+        <img class="about-photo" src="assets/audrey-portrait.svg" alt="Portrait d'Audrey">
+        <div>
+          <p>Je m'appelle Audrey. Je suis sophrologue.</p>
+          <p>La sophrologie est entrée dans ma vie à un moment où j'en avais besoin — des épreuves de santé, une rupture, des périodes où le sol semblait moins stable qu'avant. Ce sont d'abord les respirations dynamiques qui m'ont aidée à mettre de la distance avec mes pensées négatives, à rester concentrée sur ce qui comptait vraiment pour moi malgré le bruit intérieur.</p>
+          <p>J'ai aussi traversé, comme beaucoup, ce sentiment de ne pas être légitime — le syndrome de l'imposteur, qui s'invite toujours au pire moment. La sophrologie m'a donné un espace pour retravailler mon rapport à mon corps, pour désamorcer les pensées limitantes et les pensées parasites qui reviennent en boucle, et pour transformer certains souvenirs difficiles en souvenirs plus légers à porter — sans les effacer, mais en changeant la façon dont ils pèsent, jusqu'à pouvoir y puiser une force plutôt qu'un poids.</p>
+          <p>C'est cette pratique, éprouvée sur moi-même avant d'être proposée à d'autres, que je mets aujourd'hui à votre disposition.</p>
+          <p class="signature">— Audrey</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--alt">
+    <div class="wrap">
+      <h2>Contact &amp; réservation</h2>
+      <div class="contact-grid">
+        <div>
+          <p style="margin-bottom:20px;">Pour réserver directement une séance :</p>
+          <a class="btn" href="https://www.sumupbookings.com/audreyozen" target="_blank" rel="noopener">Réserver une séance</a>
+
+          <p style="margin-top:36px;margin-bottom:12px;">Pour toute question, notamment hors zone géographique :</p>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci.html">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none">
+              <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
+            </p>
+            <div>
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn submit-btn" type="submit">Envoyer</button>
+          </form>
+        </div>
+        <div class="contact-side">
+          <div class="card">
+            <h3>Zone géographique</h3>
+            <p style="font-size:14.5px;">93, 77, 95, Oise (60). Ailleurs, réponse par mail selon la distance.</p>
+          </div>
+          <div class="card">
+            <h3>Délai de réponse</h3>
+            <p style="font-size:14.5px;">Message vocal entre les séances, réponse sous 48h ouvrées.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="brand">Racine et Souffle</div>
+  <p>Sophrologie individuelle · 93 · 77 · 95 · Oise (60)</p>
+</footer>
+
+</body>
+</html>
