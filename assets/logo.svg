@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" fill="none">
+  <circle cx="60" cy="14" r="6" fill="#A8673D"/>
+  <path d="M60 20 L60 108" stroke="#1F4B57" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- upper leaf cluster (left) -->
+  <path d="M60 38 C48 34 42 26 44 18 C52 20 58 28 60 38 Z" stroke="#1F4B57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 50 C46 47 38 39 40 30 C50 32 57 40 60 50 Z" stroke="#1F4B57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- upper leaf cluster (right) -->
+  <path d="M60 34 C71 29 78 21 76 13 C68 16 62 24 60 34 Z" stroke="#1F4B57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 46 C73 42 81 34 79 25 C69 28 62 36 60 46 Z" stroke="#1F4B57" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- roots -->
+  <path d="M60 108 C60 118 44 118 34 132" stroke="#1F4B57" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 108 C60 120 76 120 86 132" stroke="#1F4B57" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 112 C60 124 50 126 46 138" stroke="#1F4B57" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 112 C60 126 70 128 74 138" stroke="#1F4B57" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 108 L60 130" stroke="#1F4B57" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
